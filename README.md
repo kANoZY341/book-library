@@ -1,80 +1,42 @@
-# SWS 215 - Lab 11: Node.js + MongoDB Backend Part II
+# SWS 215 - Lab 12: Git, GitHub, and Branching Workflows
 
 ## Project Overview
-This lab is a full-stack Book Library app with:
-- React + Vite frontend (`client/`)
-- Node.js + Express + MongoDB backend (`server/`)
-- Mongoose for MongoDB models and CRUD operations
+This repository contains a full-stack Book Library application built using the MERN stack (MongoDB, Express, Node.js, and React). The primary focus of this lab was to implement professional version control workflows using Git and GitHub.
 
-Features included:
-- View all books
-- View book details
-- Add new book (`/books/add`)
-- Update book (`/books/edit/:id`)
-- Delete book from detail page
+### Key Learning Objectives:
+* **Feature Branching**: Developing new components (like the `UpdateBook` page) on isolated branches to protect the stable codebase.
+* **Pull Requests**: Using GitHub's PR system to review and document code changes.
+* **Merging**: Integrating completed features back into the `main` branch.
+* **Remote Syncing**: Managing the relationship between local development and the remote GitHub repository.
+
+---
 
 ## Tech Stack
-- Frontend: React, React Router, Vite
-- Backend: Node.js, Express, MongoDB, Mongoose
-- Utilities: dotenv, cors, nodemon
+* **Frontend**: React, React Router, Vite
+* **Backend**: Node.js, Express, MongoDB, Mongoose
+* **Version Control**: Git & GitHub
+
+---
 
 ## Folder Structure
-```text
-lab11-nodejs-mongodb-part2/
-  client/
-  server/
-  README.md
-  REVIEW_QUESTIONS_ANSWERS.md
-  SUBMISSION_CHECKLIST.md
-```
+* `client/`: React frontend application.
+* `server/`: Node.js/Express backend and MongoDB models.
+* `.gitignore`: Configured to exclude `node_modules` and sensitive `.env` files.
+* `.env.example`: Template for required environment variables.
 
-## Server Setup
-1. Open terminal in `server/`
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Create `.env` based on `.env.example`
-4. Run server:
-   ```bash
-   npm run dev
-   ```
+---
 
-## Client Setup
-1. Open terminal in `client/`
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run frontend:
-   ```bash
-   npm run dev
-   ```
+## Git Workflow Practiced
+1. **Initialize**: Started the local repository and linked to GitHub.
+2. **Branching**: Created a `feature/update-book` branch for the Update Book functionality.
+3. **Staging & Committing**: Practiced granular commits to track progress.
+4. **Pushing**: Published the local feature branch to the remote repository.
+5. **PR & Merge**: Successfully opened a Pull Request on GitHub and merged it into `main`.
 
-The Vite dev server uses proxy for `/api` to `http://localhost:5000`.
+---
 
-## Environment Variables
-In `server/`, copy `.env.example` to `.env` and update values:
-```env
-MONGO_URI=your_actual_mongodb_connection_string
-PORT=5000
-```
-
-## API Endpoints
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/books` | Get all books |
-| GET | `/api/books/:id` | Get one book by ID |
-| POST | `/api/books` | Create new book |
-| PUT | `/api/books/:id` | Update existing book |
-| DELETE | `/api/books/:id` | Delete a book |
-
-
-## Submission Contents
-- `client/` source code
-- `server/` source code
-- `.env.example` (no `.env` committed)
-- `REVIEW_QUESTIONS_ANSWERS.md`
-- `SUBMISSION_CHECKLIST.md`
-
-
+## Setup Instructions
+1. Clone the repository.
+2. Run `npm install` in both the `client` and `server` directories.
+3. Create a `.env` file in the `server` directory based on the `.env.example` file.
+4. Run `npm start` (or your specific start script) to launch the application.
